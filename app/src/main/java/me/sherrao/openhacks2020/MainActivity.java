@@ -1,7 +1,11 @@
 package me.sherrao.openhacks2020;
 
+import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.MotionEvent;
+import android.widget.TextView;
+import android.widget.Toolbar;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -18,16 +22,30 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         BottomNavigationView navView = findViewById(R.id.nav_view);
+        navView.setBackgroundColor(Color.rgb(0, 188, 169));
+
+
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
+        /**
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.navigation_water, R.id.navigation_new, R.id.navigation_power)
+                R.id.navigation_add, R.id.navigation_misc, R.id.navigation_rooms, R.id.navigation_settings, R.id.navigation_tech )
                 .build();
+        appBarConfiguration.
+           */
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
-        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(navView, navController);
 
     }
+
+    @Override
+    protected void onPostCreate(Bundle savedBundleInstance) {
+        super.onPostCreate(savedBundleInstance);
+        //super.getSupportActionBar().addOnMenuVisibilityListener(  );
+        //super.getActionBar().addOnMenuVisibilityListener( (event) -> {} );
+
+    }
+
 
     @Override
     public void onBackPressed() {

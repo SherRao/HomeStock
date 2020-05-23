@@ -1,17 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_rooms"
+        android:icon="@drawable/ic_home"
+        android:title="Rooms" />
 
     <item
-        android:id="@+id/navigation_power"
-        android:icon="@drawable/ic_notifications_black_24dp"
-        android:title="Power Usage" />
+        android:id="@+id/navigation_tech"
+        android:icon="@drawable/ic_bulb"
+        android:title="Technology" />
+
     <item
-        android:id="@+id/navigation_water"
-        android:icon="@drawable/ic_home_black_24dp"
-        android:title="Water Usage" />
+        android:id="@+id/navigation_add"
+        android:icon="@drawable/ic_plus"
+        android:title="Add Item" />
+
     <item
-        android:id="@+id/navigation_new"
-        android:icon="@drawable/ic_dashboard_black_24dp"
-        android:title="New" />
+        android:id="@+id/navigation_misc"
+        android:icon="@drawable/ic_cupboard"
+        android:title="Miscellaneous" />
+
+    <item
+        android:id="@+id/navigation_settings"
+        android:icon="@drawable/ic_settings"
+        android:title="Settings" />
 
 </menu>
