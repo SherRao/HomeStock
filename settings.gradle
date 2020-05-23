@@ -1,0 +1,2 @@
+rootProject.name='OpenHacks 2020'
+include ':app'
