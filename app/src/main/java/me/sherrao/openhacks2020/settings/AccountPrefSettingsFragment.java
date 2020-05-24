@@ -1,4 +1,4 @@
-package me.sherrao.openhacks2020;
+package me.sherrao.openhacks2020.settings;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -7,7 +7,12 @@ import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
 
-public class RoomsFragment extends Fragment {
+import me.sherrao.openhacks2020.R;
+
+public class AccountPrefSettingsFragment extends Fragment {
+
+    public AccountPrefSettingsFragment() {
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -17,9 +22,9 @@ public class RoomsFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_rooms, container, false);
+        View root = inflater.inflate(R.layout.fragment_account_pref, container, false);
 
-        return view;
+        return root;
 
     }
 }

@@ -5,8 +5,7 @@
     android:id="@+id/misc_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#CEE8E8"
-    tools:context=".MiscFragment">
+    android:background="#CEE8E8" tools:context=".pages.MiscFragment">
 
     <TextView
         android:id="@+id/tech_title"

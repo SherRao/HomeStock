@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/add_container"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".AddFragment">
+    android:layout_height="match_parent" tools:context=".pages.AddFragment">
 
     <ImageView
         android:id="@+id/add_header_background"

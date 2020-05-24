@@ -10,6 +10,8 @@ import androidx.navigation.ui.NavigationUI;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import backend.Backend;
+
 public class MainActivity extends AppCompatActivity {
 
     private Backend backend;

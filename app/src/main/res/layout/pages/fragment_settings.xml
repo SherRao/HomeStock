@@ -6,8 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:animationCache="false"
-    android:background="#CEE8E8"
-    tools:context=".SettingsFragment">
+    android:background="#CEE8E8" tools:context=".pages.SettingsFragment">
 
     <ImageView
         android:id="@+id/settings_header_background"
