@@ -18,7 +18,11 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
+import backend.Backend;
+
 public class MainActivity extends AppCompatActivity {
+
+    private Backend backend;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,37 +32,23 @@ public class MainActivity extends AppCompatActivity {
         BottomNavigationView navView = findViewById(R.id.nav_view);
         navView.setBackgroundColor(Color.rgb(0, 188, 169));
 
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
         /**
+         // Passing each menu ID as a set of Ids because each
+        // menu should be considered as top level destinations.
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.navigation_add, R.id.navigation_misc, R.id.navigation_rooms, R.id.navigation_settings, R.id.navigation_tech )
                 .build();
         appBarConfiguration.
            */
+
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupWithNavController(navView, navController);
+        backend = new Backend(this);
 
     }
 
-    @Override
-    protected void onPostCreate(Bundle savedBundleInstance) {
-        super.onPostCreate(savedBundleInstance);
-        //super.getSupportActionBar().addOnMenuVisibilityListener(  );
-        //super.getActionBar().addOnMenuVisibilityListener( (event) -> {} );
-
-    }
-
-
-    @Override
-    public void onBackPressed() {
-        return;
-
-    }
-
-    @Override
-    public boolean onTouchEvent(MotionEvent event) {
-        return super.onTouchEvent(event);
+    public Backend getBackend() {
+        return backend;
 
     }
 
