@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -13,7 +14,7 @@ public class SplashActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-        ((Button) findViewById(R.id.splash_button)).setOnClickListener( (View view) -> {
+        ((ImageButton) findViewById(R.id.splash_button)).setOnClickListener( (View view) -> {
             Intent intent = new Intent(SplashActivity.this, MainActivity.class);
             startActivity(intent);
             finish();
