@@ -1,27 +1,25 @@
 package backend;
 
-import android.media.Image;
-
-import androidx.annotation.NonNull;
-
 import java.util.Date;
 
 public class TechItem {
 
     public String name;
     public String description;
-    public Image image;
+    public String imageLocation;
     public String location;
-    public int powerUsage;
+    public int quantity;
     public Date expiration;
+    public int power;
 
-    public TechItem(@NonNull  String name, String description, Image image, String location, int powerUsage, Date expiration) {
+    public TechItem(String name, String description, String imageLocation, String location, int quantity, Date expiration, int power) {
         this.name = name;
         this.description = description;
-        this.image = image;
+        this.imageLocation = imageLocation;
         this.location = location;
-        this.powerUsage = powerUsage;
+        this.quantity = quantity;
         this.expiration = expiration;
+        this.power = power;
 
     }
 

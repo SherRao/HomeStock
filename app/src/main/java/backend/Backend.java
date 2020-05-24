@@ -1,8 +1,9 @@
 package backend;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+import android.widget.ImageButton;
+
+import java.util.HashMap;
+import java.util.Map;
 
 import me.sherrao.openhacks2020.MainActivity;
 
@@ -10,56 +11,40 @@ public class Backend {
 
     private final MainActivity app;
 
+    private Map<ImageButton, Item> miscItems;
+    private Map<ImageButton, TechItem> techItems;
+
     public Backend(MainActivity app) {
         this.app = app;
 
-    }
-
-    public void submitAuthRequest() {
-        //database stuff
-
-    }
-
-    public void submitItem(String name, String description, String location) {
-        //database stuff
+        this.miscItems = new HashMap<>();
+        this.techItems = new HashMap<>();
+        populateMap();
 
     }
 
-    public void submitTech(String name, String description, String location, int powerConsumption, Date expirationDate) {
-        //database stuff
+    private void populateMap() {
+
 
     }
 
-    public void setPowerUnit(String powerUnit) {
-        //database stuff
+    public Item getItemFromButton(ImageButton button) {
+        return this.miscItems.get(button);
 
     }
 
-    public String getUserName() {
-        //database stuff
-
-        return "John Smith";
+    public TechItem getTechItemFromButton(ImageButton button) {
+        return this.techItems.get(button);
 
     }
 
-    public List<Item> getMiscItems() {
-        List<Item> items = new ArrayList<>();
-        //database stuff
-
-        return items;
+    public int getMiscItemsCount() {
+        return this.miscItems.size();
 
     }
 
-    public List<TechItem> getTechItem() {
-        List<TechItem> items = new ArrayList<>();
-        //database stuff
-
-        return items;
-    }
-
-    public String getPowerUnit() {
-        //database stuff
-        return "KWh";
+    public int getTechItemCount() {
+        return this.techItems.size();
 
     }
 

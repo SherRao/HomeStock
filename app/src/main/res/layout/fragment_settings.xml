@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:animationCache="false"
-    android:background="#01817D"
+    android:background="#CEE8E8"
     tools:context=".SettingsFragment">
 
     <ImageView
@@ -26,6 +26,7 @@
         android:layout_width="323dp"
         android:layout_height="134dp"
         android:layout_marginBottom="548dp"
+        android:foreground="@drawable/ic_settings_profile_back"
         android:src="@drawable/ic_settings_profile_background"
         android:translationZ="3dp"
         app:layout_constraintBottom_toBottomOf="parent"

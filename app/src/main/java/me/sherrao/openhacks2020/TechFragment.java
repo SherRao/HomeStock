@@ -1,16 +1,16 @@
 package me.sherrao.openhacks2020;
 
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.fragment.app.Fragment;
+
 public class TechFragment extends Fragment {
 
-    public TechFragment() {}
+    public TechFragment() {
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
