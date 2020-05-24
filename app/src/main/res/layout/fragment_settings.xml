@@ -11,9 +11,9 @@
 
     <ImageView
         android:id="@+id/settings_header_background"
-        android:layout_width="411dp"
-        android:layout_height="589dp"
-        android:layout_marginBottom="444dp"
+        android:layout_width="435dp"
+        android:layout_height="281dp"
+        android:layout_marginBottom="584dp"
         android:src="@drawable/header_background"
         android:translationZ="1dp"
         android:visibility="visible"
@@ -23,9 +23,9 @@
 
     <ImageView
         android:id="@+id/settings_profile_background"
-        android:layout_width="350dp"
-        android:layout_height="548dp"
-        android:layout_marginBottom="344dp"
+        android:layout_width="323dp"
+        android:layout_height="134dp"
+        android:layout_marginBottom="548dp"
         android:src="@drawable/ic_settings_profile_background"
         android:translationZ="3dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -37,6 +37,7 @@
         android:layout_width="fill_parent"
         android:layout_height="46dp"
         android:layout_marginTop="60dp"
+        android:fontFamily="@font/poppins_bold"
         android:gravity="center"
         android:text="Settings"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
@@ -57,7 +58,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/default_profile" />
 
     <TextView
         android:id="@+id/account_name"
@@ -66,32 +68,76 @@
         android:layout_marginBottom="560dp"
         android:fontFamily="@font/poppins_bold"
         android:gravity="center"
-        android:text="John Smith"
+        android:text="Ratchel Green"
         android:translationZ="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <ImageView
-        android:id="@+id/settings_options_background"
-        android:layout_width="334dp"
-        android:layout_height="432dp"
-        android:layout_marginBottom="75dp"
-        android:src="@drawable/ic_settings_options_background"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <ImageButton
+        android:id="@+id/account_info"
+        android:layout_width="350dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="75dp"
+        android:background="@android:color/transparent"
+        android:scaleType="centerInside"
+        android:src="@drawable/account_info"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/settings_header_background" />
 
     <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="325dp"
-        android:layout_height="76dp"
-        android:layout_marginBottom="209dp"
-        android:scaleType="fitCenter"
-        android:src="@drawable/ic_account_information"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/personalisation"
+        android:layout_width="350dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/transparent"
+        android:scaleType="centerInside"
+        android:src="@drawable/personalization"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/account_info" />
+
+    <ImageButton
+        android:id="@+id/measurements"
+        android:layout_width="350dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/transparent"
+        android:scaleType="centerInside"
+        android:src="@drawable/measurements"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/personalisation" />
+
+    <ImageButton
+        android:id="@+id/langs"
+        android:layout_width="350dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/transparent"
+        android:scaleType="centerInside"
+        android:src="@drawable/langs"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/measurements" />
+
+    <ImageButton
+        android:id="@+id/help"
+        android:layout_width="350dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/transparent"
+        android:scaleType="centerInside"
+        android:src="@drawable/help"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/langs" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -37,4 +37,101 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageView
+        android:id="@+id/account_icon"
+        android:layout_width="78dp"
+        android:layout_height="74dp"
+        android:layout_marginBottom="656dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_account_icon"
+        android:translationZ="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/default_profile" />
+
+    <TextView
+        android:id="@+id/home_greeting"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="208dp"
+        android:fontFamily="@font/poppins_light"
+        android:gravity="center"
+        android:text="What are you looking for today?"
+        android:textColor="#FFFFFF"
+        android:translationZ="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/home_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="188dp"
+        android:fontFamily="@font/poppins_medium"
+        android:gravity="center"
+        android:text="Hello, Ratchel Green!"
+        android:textColor="#FFFFFF"
+        android:translationZ="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/kitchen_button"
+        android:layout_width="365dp"
+        android:layout_height="847dp"
+        android:layout_marginBottom="100dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/kitchen"
+        android:translationZ="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/livingroom_button"
+        android:layout_width="365dp"
+        android:layout_height="847dp"
+        android:layout_marginTop="28dp"
+        android:background="@android:color/transparent"
+        android:foreground="@android:color/transparent"
+        android:src="@drawable/kitchen"
+        android:translationZ="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/living_room" />
+
+    <ImageView
+        android:id="@+id/washroom_button"
+        android:layout_width="365dp"
+        android:layout_height="847dp"
+        android:layout_marginTop="164dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/kitchen"
+        android:translationZ="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/washroom" />
+
+    <ImageView
+        android:id="@+id/garage_button"
+        android:layout_width="365dp"
+        android:layout_height="847dp"
+        android:layout_marginTop="300dp"
+        android:background="@android:color/transparent"
+        android:longClickable="false"
+        android:src="@drawable/kitchen"
+        android:translationZ="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/garage" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

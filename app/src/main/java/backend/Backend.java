@@ -20,12 +20,12 @@ public class Backend {
 
     }
 
-    public void submitItem(String name, String description, String location ) {
+    public void submitItem(String name, String description, String location) {
         //database stuff
 
     }
 
-    public void submitTech(String name, String description, String location, int powerConsumption, Date expirationDate ) {
+    public void submitTech(String name, String description, String location, int powerConsumption, Date expirationDate) {
         //database stuff
 
     }
