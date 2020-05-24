@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "960143897977",
+    "firebase_url": "https://openhacks2020.firebaseio.com",
+    "project_id": "openhacks2020",
+    "storage_bucket": "openhacks2020.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:960143897977:android:fdcc4806e7a17874f9eba8",
+        "android_client_info": {
+          "package_name": "me.sherrao.openhacks2020"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "960143897977-dht8goquk2234qsoufthmpmg93doesoq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBRc43TIkw-IqTZEzDS4OgeWOfIEpvRcqw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "960143897977-dht8goquk2234qsoufthmpmg93doesoq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
