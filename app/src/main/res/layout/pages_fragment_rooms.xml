@@ -72,7 +72,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins_medium"
         android:gravity="center"
-        android:text="Hello, Ratchel Green!"
+        android:text="Hello, Rachel Green!"
         android:textColor="#FFFFFF"
         android:translationZ="2dp"
         app:layout_constraintEnd_toEndOf="parent"

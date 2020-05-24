@@ -67,7 +67,7 @@
         android:layout_marginBottom="560dp"
         android:fontFamily="@font/poppins_bold"
         android:gravity="center"
-        android:text="Ratchel Green"
+        android:text="Rachel Green"
         android:translationZ="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

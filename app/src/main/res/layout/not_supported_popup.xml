@@ -1,17 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:background="#00BCA9">
+    android:background="@android:color/transparent">
 
-    <TextView
+    <ImageView
+        android:id="@+id/imageView"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:layout_margin="30dp"
-        android:fontFamily="@font/poppins_medium"
-        android:gravity="center"
-        android:text="This feature is currently not supported :/"
-        android:textSize="22sp" />
+        android:layout_height="300dp"
+        app:srcCompat="@drawable/unavailable" />
 
 </RelativeLayout>
