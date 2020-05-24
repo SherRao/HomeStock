@@ -59,6 +59,6 @@ public class HelpSettingsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_help_settings, container, false);
+        return inflater.inflate(R.layout.settings_fragment_help_settings, container, false);
     }
 }

@@ -23,7 +23,7 @@ public class MiscFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_misc, container, false);
+        View view = inflater.inflate(R.layout.pages_fragment_misc, container, false);
 
         return view;
     }

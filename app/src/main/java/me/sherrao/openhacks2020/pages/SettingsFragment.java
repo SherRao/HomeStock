@@ -28,7 +28,7 @@ public class SettingsFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.fragment_settings, container, false);
+        View root = inflater.inflate(R.layout.pages_fragment_settings, container, false);
         app = (MainActivity) super.getActivity();
 
         return root;

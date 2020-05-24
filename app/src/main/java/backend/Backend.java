@@ -27,12 +27,12 @@ public class Backend {
     }
 
     public Item getItemFromButton(String buttonName) {
-        return this.miscItems.get(button);
+        return this.miscItems.get(buttonName);
 
     }
 
     public TechItem getTechItemFromButton(String buttonName) {
-        return this.techItems.get(button);
+        return this.techItems.get(buttonName);
 
     }
 
