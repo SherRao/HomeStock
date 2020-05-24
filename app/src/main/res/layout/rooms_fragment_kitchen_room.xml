@@ -1,10 +1,139 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" tools:context=".rooms.KitchenRoomFragment">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/misc_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CEE8E8"
+    tools:context=".rooms.KitchenRoomFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView android:layout_width="match_parent" android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <TextView
+        android:id="@+id/kitchen_title"
+        android:layout_width="fill_parent"
+        android:layout_height="46dp"
+        android:layout_marginTop="60dp"
+        android:fontFamily="@font/poppins_bold"
+        android:gravity="center"
+        android:text="Kitchen"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#FFFFFF"
+        android:translationZ="2dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+    <ImageView
+        android:id="@+id/kitchen_header_background2"
+        android:layout_width="435dp"
+        android:layout_height="281dp"
+        android:layout_marginBottom="650dp"
+        android:src="@drawable/header_background"
+        android:translationZ="1dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/kitchen_amount"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="110dp"
+        android:fontFamily="@font/poppins_light"
+        android:gravity="center"
+        android:text="Number of Items: {number}"
+        android:textColor="#FFFFFF"
+        android:translationZ="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/overview"
+        android:layout_width="360dp"
+        android:layout_height="104dp"
+        android:layout_marginTop="155dp"
+        android:foreground="@drawable/overview_dark"
+        android:scaleType="centerInside"
+        android:src="@drawable/overview"
+        android:translationZ="3dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/utensils"
+        android:layout_width="335dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/transparent"
+        android:scaleType="centerInside"
+        android:src="@drawable/utensils"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/overview" />
+
+    <ImageButton
+        android:id="@+id/microwave_1"
+        android:layout_width="335dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="5dp"
+        android:background="@android:color/transparent"
+        android:scaleType="centerInside"
+        android:src="@drawable/microwave__1_"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/utensils" />
+
+    <ImageButton
+        android:id="@+id/kettle"
+        android:layout_width="335dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="5dp"
+        android:background="@android:color/transparent"
+        android:scaleType="centerInside"
+        android:src="@drawable/kettle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/microwave_1" />
+
+    <ImageButton
+        android:id="@+id/frypan"
+        android:layout_width="335dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="5dp"
+        android:background="@android:color/transparent"
+        android:scaleType="centerInside"
+        android:src="@drawable/frypan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/kettle" />
+
+    <ImageButton
+        android:id="@+id/fridge"
+        android:layout_width="335dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="5dp"
+        android:background="@android:color/transparent"
+        android:scaleType="centerInside"
+        android:src="@drawable/fridge"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frypan" />
+
+    <ImageButton
+        android:id="@+id/cutlery"
+        android:layout_width="335dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="5dp"
+        android:background="@android:color/transparent"
+        android:foreground="@drawable/cutlery"
+        android:scaleType="centerInside"
+        android:src="@drawable/toolkit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fridge" />
+</androidx.constraintlayout.widget.ConstraintLayout>

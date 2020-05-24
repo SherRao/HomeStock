@@ -68,7 +68,7 @@
         android:layout_marginTop="20dp"
         android:background="@android:color/transparent"
         android:scaleType="centerInside"
-        android:src="@drawable/television"
+        android:src="@drawable/toiletpaper"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/overview" />
@@ -80,7 +80,7 @@
         android:layout_marginTop="5dp"
         android:background="@android:color/transparent"
         android:scaleType="centerInside"
-        android:src="@drawable/laptop"
+        android:src="@drawable/lawnmower"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toiletpaper" />
@@ -92,7 +92,7 @@
         android:layout_marginTop="5dp"
         android:background="@android:color/transparent"
         android:scaleType="centerInside"
-        android:src="@drawable/vacuum"
+        android:src="@drawable/guitar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lawnmower" />
@@ -104,7 +104,7 @@
         android:layout_marginTop="5dp"
         android:background="@android:color/transparent"
         android:scaleType="centerInside"
-        android:src="@drawable/microwave"
+        android:src="@drawable/giftwrap"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/guitar" />
@@ -116,7 +116,7 @@
         android:layout_marginTop="5dp"
         android:background="@android:color/transparent"
         android:scaleType="centerInside"
-        android:src="@drawable/lightbulbs"
+        android:src="@drawable/bicycle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/giftwrap" />
@@ -128,7 +128,7 @@
         android:layout_marginTop="5dp"
         android:background="@android:color/transparent"
         android:scaleType="centerInside"
-        android:src="@drawable/acunit"
+        android:src="@drawable/toolkit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bicycle" />
