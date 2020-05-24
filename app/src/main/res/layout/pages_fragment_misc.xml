@@ -8,7 +8,7 @@
     android:background="#CEE8E8" tools:context=".pages.MiscFragment">
 
     <TextView
-        android:id="@+id/tech_title"
+        android:id="@+id/misc_title"
         android:layout_width="fill_parent"
         android:layout_height="46dp"
         android:layout_marginTop="20dp"
@@ -36,7 +36,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/tech_amount"
+        android:id="@+id/misc_amount"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="70dp"

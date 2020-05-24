@@ -34,7 +34,7 @@ public class MiscFragment extends Fragment {
         app = (MainActivity) super.getActivity();
         backend = app.getBackend();
 
-        TextView text = root.findViewById(R.id.kitchen_amount);
+        TextView text = root.findViewById(R.id.misc_amount);
         text.setText("Number of Items: " + backend.getMiscCount());
 
         ImageButton toiletpaperButton = root.findViewById(R.id.toiletpaper);

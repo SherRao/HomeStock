@@ -46,7 +46,7 @@ public class KitchenRoomFragment extends Fragment {
             }
         });
 
-        ImageButton mwButton = root.findViewById(R.id.microwave);
+        ImageButton mwButton = root.findViewById(R.id.microwave_1);
         mwButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -86,7 +86,7 @@ public class KitchenRoomFragment extends Fragment {
             }
         });
 
-        ImageButton tkButton = root.findViewById(R.id.toolkit);
+        ImageButton tkButton = root.findViewById(R.id.cutlery);
         tkButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -52,7 +52,7 @@ public class ItemDisplayFragment extends Fragment {
             itemLoc.setText(item.location);
 
             EditText itemQuantity = root.findViewById(R.id.item_quantity);
-            itemQuantity.setText(item.quantity);
+            itemQuantity.setText(item.quantity + "");
 
             EditText itemPower = root.findViewById(R.id.item_power);
             itemPower.setText("");
@@ -61,6 +61,7 @@ public class ItemDisplayFragment extends Fragment {
             itemExp.setText("");
 
             app.item = null;
+            app.titem = null;
         } else {
             TechItem titem = app.titem;
             if (titem != null) {
@@ -77,21 +78,20 @@ public class ItemDisplayFragment extends Fragment {
                 itemLoc.setText(titem.location);
 
                 EditText itemQuantity = root.findViewById(R.id.item_quantity);
-                itemQuantity.setText(titem.quantity);
+                itemQuantity.setText(titem.quantity + "");
 
                 EditText itemPower = root.findViewById(R.id.item_power);
-                itemPower.setText(titem.power);
+                itemPower.setText(titem.power + "");
 
                 long s = titem.expiration * 1000;
                 Date d = new Date(s * 1000);
 
                 EditText itemExp = root.findViewById(R.id.item_exp);
-                itemExp.setText(d.getDay() + "/" + d.getMonth() + "/" + d.getYear());
+                itemExp.setText("ERR");//d.getDay() + "/" + d.getMonth() + "/" + d.getYear());
 
+                app.item = null;
                 app.titem = null;
-
             }
-
         }
 
         return root;
