@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
@@ -33,11 +34,14 @@ public class MiscFragment extends Fragment {
         app = (MainActivity) super.getActivity();
         backend = app.getBackend();
 
+        TextView text = root.findViewById(R.id.kitchen_amount);
+        text.setText("Number of Items: " + backend.getMiscCount());
+
         ImageButton toiletpaperButton = root.findViewById(R.id.toiletpaper);
         toiletpaperButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                app.item("gay");
+                app.item = backend.miscItems.get("toiletpaper");
                 Navigation.findNavController(v).navigate(R.id.navigation_itemview, null, null);
 
             }
@@ -47,7 +51,7 @@ public class MiscFragment extends Fragment {
         lawnmowerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                app.item("hi");
+                app.item = backend.miscItems.get("mower");
                 Navigation.findNavController(v).navigate(R.id.navigation_itemview, null, null);
 
             }
@@ -57,6 +61,9 @@ public class MiscFragment extends Fragment {
         guitarButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                app.item = backend.miscItems.get("guitar");
+                Navigation.findNavController(v).navigate(R.id.navigation_itemview, null, null);
+
             }
         });
 
@@ -64,6 +71,9 @@ public class MiscFragment extends Fragment {
         giftwrapButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                app.item = backend.miscItems.get("giftwrap");
+                Navigation.findNavController(v).navigate(R.id.navigation_itemview, null, null);
+
             }
         });
 
@@ -71,6 +81,9 @@ public class MiscFragment extends Fragment {
         bicycleButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                app.item = backend.miscItems.get("cycle");
+                Navigation.findNavController(v).navigate(R.id.navigation_itemview, null, null);
+
             }
         });
 
@@ -78,6 +91,9 @@ public class MiscFragment extends Fragment {
         toolkitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                app.item = backend.miscItems.get("utensils");
+                Navigation.findNavController(v).navigate(R.id.navigation_itemview, null, null);
+
             }
         });
 

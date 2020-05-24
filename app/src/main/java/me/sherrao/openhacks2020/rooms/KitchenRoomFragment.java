@@ -4,61 +4,99 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
+import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
+import backend.Backend;
+import me.sherrao.openhacks2020.MainActivity;
 import me.sherrao.openhacks2020.R;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link KitchenRoomFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class KitchenRoomFragment extends Fragment {
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    private MainActivity app;
+    private Backend backend;
 
     public KitchenRoomFragment() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment KitchenRoomFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static KitchenRoomFragment newInstance(String param1, String param2) {
-        KitchenRoomFragment fragment = new KitchenRoomFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.rooms_fragment_kitchen_room, container, false);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View root = inflater.inflate(R.layout.rooms_fragment_kitchen_room, container, false);
+        app = (MainActivity) super.getActivity();
+        backend = app.getBackend();
+
+        TextView text = root.findViewById(R.id.kitchen_amount);
+        text.setText("Number of Items: " + backend.getKitchenCount());
+
+        ImageButton utensilsButton = root.findViewById(R.id.utensils);
+        utensilsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                app.item = backend.kitchenItems.get("utensils");
+                Navigation.findNavController(v).navigate(R.id.navigation_itemview, null, null);
+
+            }
+        });
+
+        ImageButton mwButton = root.findViewById(R.id.microwave);
+        mwButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                app.titem = backend.kitchenTItems.get("microwave");
+                Navigation.findNavController(v).navigate(R.id.navigation_itemview, null, null);
+
+            }
+        });
+
+        ImageButton kettleButton = root.findViewById(R.id.kettle);
+        kettleButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                app.titem = backend.kitchenTItems.get("kettle");
+                Navigation.findNavController(v).navigate(R.id.navigation_itemview, null, null);
+
+            }
+        });
+
+        ImageButton fpButton = root.findViewById(R.id.frypan);
+        fpButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                app.item = backend.kitchenItems.get("frypan");
+                Navigation.findNavController(v).navigate(R.id.navigation_itemview, null, null);
+
+            }
+        });
+
+        ImageButton fridgeButton = root.findViewById(R.id.fridge);
+        fridgeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                app.titem = backend.kitchenTItems.get("fridge");
+                Navigation.findNavController(v).navigate(R.id.navigation_itemview, null, null);
+
+            }
+        });
+
+        ImageButton tkButton = root.findViewById(R.id.toolkit);
+        tkButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                app.item = backend.kitchenItems.get("toolkit");
+                Navigation.findNavController(v).navigate(R.id.navigation_itemview, null, null);
+
+            }
+        });
+
+        return root;
+
     }
 }

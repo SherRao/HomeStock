@@ -25,16 +25,21 @@ import androidx.navigation.ui.NavigationUI;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import backend.Backend;
+import backend.Item;
+import backend.TechItem;
 
 public class MainActivity extends AppCompatActivity {
 
     private Backend backend;
-    public String s;
 
     private ViewGroup overlayParent;
     private ViewGroupOverlay overlay;
     private Drawable dim;
 
+    public Item item;
+    public TechItem titem;
+
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         backend = new Backend(this);
@@ -42,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         super.setContentView(R.layout.activity_main);
         super.getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION |
+                View.SYSTEM_UI_FLAG_FULLSCREEN |
                 View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN |
                 View.SYSTEM_UI_FLAG_HIDE_NAVIGATION |
                 View.SYSTEM_UI_FLAG_IMMERSIVE |
@@ -51,11 +57,11 @@ public class MainActivity extends AppCompatActivity {
         navView.setBackgroundColor(Color.rgb(0, 188, 169));
 
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
-        NavigationUI.setupActionBarWithNavController(this, navController);
+        NavigationUI.setupWithNavController(navView, navController);
 
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR2)
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     public View onCreateView(String name, Context context, AttributeSet attrs) {
         overlayParent = (ViewGroup) super.getWindow().getDecorView().getRootView();
@@ -92,11 +98,6 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
-    }
-
-    public void item(String s) {
-        this.s = s;
 
     }
 

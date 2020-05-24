@@ -1,20 +1,228 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
     android:id="@+id/itemdisplay_container"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#01817D"
     tools:context=".ItemDisplayFragment">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button" />
+    <TextView
+        android:id="@+id/item_title"
+        android:layout_width="fill_parent"
+        android:layout_height="46dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/poppins_bold"
+        android:gravity="center"
+        android:text="Item"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#FFFFFF"
+        android:translationZ="2dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/item_header_background3"
+        android:layout_width="435dp"
+        android:layout_height="281dp"
+        android:layout_marginBottom="700dp"
+        android:src="@drawable/header_background"
+        android:translationZ="1dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/item_pic_back"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:layout_marginTop="17dp"
+        android:src="@drawable/ic_rectangle_603"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/item_header_background3" />
+
+    <ImageView
+        android:id="@+id/item_pic"
+        android:layout_width="130dp"
+        android:layout_height="115dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/ic_bulb"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/item_header_background3" />
+
+    <TextView
+        android:id="@+id/item_description_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_account_icon" />
-</FrameLayout>
+        android:layout_marginTop="217dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Description:"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/item_description"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/item_header_background3" />
+
+    <EditText
+        android:id="@+id/item_description"
+        android:layout_width="257dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="203dp"
+        android:ems="10"
+        android:fontFamily="@font/poppins_light"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:textColor="#BCBCBC"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/item_description_label"
+        app:layout_constraintTop_toBottomOf="@+id/item_header_background3" />
+
+    <EditText
+        android:id="@+id/item_location"
+        android:layout_width="257dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="22dp"
+        android:ems="10"
+        android:fontFamily="@font/poppins_light"
+        android:inputType="textPersonName"
+        android:text="Desc "
+        android:textColor="#BCBCBC"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toEndOf="@+id/item_description_label"
+        app:layout_constraintTop_toBottomOf="@+id/item_description" />
+
+    <TextView
+        android:id="@+id/item_location_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Location:"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/item_description"
+        app:layout_constraintHorizontal_bias="0.54"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/item_description_label" />
+
+    <EditText
+        android:id="@+id/item_quantity"
+        android:layout_width="257dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="22dp"
+        android:ems="10"
+        android:fontFamily="@font/poppins_light"
+        android:inputType="number"
+        android:text="# "
+        android:textColor="#BCBCBC"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toEndOf="@+id/item_description_label"
+        app:layout_constraintTop_toBottomOf="@+id/item_location" />
+
+    <TextView
+        android:id="@+id/item_quantity_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Quantity:"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/item_description"
+        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/item_location_label" />
+
+    <EditText
+        android:id="@+id/item_power"
+        android:layout_width="257dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="22dp"
+        android:ems="10"
+        android:fontFamily="@font/poppins_light"
+        android:inputType="textPersonName"
+        android:text="Desc "
+        android:textColor="#BCBCBC"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toEndOf="@+id/item_description_label"
+        app:layout_constraintTop_toBottomOf="@+id/item_quantity" />
+
+    <TextView
+        android:id="@+id/item_power_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Power  (KWh):"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/item_description"
+        app:layout_constraintHorizontal_bias="0.542"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/item_quantity_label" />
+
+    <EditText
+        android:id="@+id/item_exp"
+        android:layout_width="257dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="22dp"
+        android:ems="10"
+        android:fontFamily="@font/poppins_light"
+        android:inputType="textPersonName"
+        android:text="Desc "
+        android:textColor="#BCBCBC"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toEndOf="@+id/item_description_label"
+        app:layout_constraintTop_toBottomOf="@+id/item_power" />
+
+    <TextView
+        android:id="@+id/item_exp_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Expiration:"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/item_description"
+        app:layout_constraintHorizontal_bias="0.529"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/item_power_label" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

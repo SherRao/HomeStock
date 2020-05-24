@@ -1,17 +1,19 @@
 package backend;
 
+import android.graphics.drawable.Drawable;
+
 public class Item {
 
     public String name;
     public String description;
-    public String imageLocation;
+    public Drawable image;
     public String location;
     public int quantity;
 
-    public Item(String name, String description, String imageLocation, String location, int quantity) {
+    public Item(String name, String description, Drawable image, String location, int quantity) {
         this.name = name;
         this.description = description;
-        this.imageLocation = imageLocation;
+        this.image = image;
         this.location = location;
         this.quantity = quantity;
 
