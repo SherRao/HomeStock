@@ -9,10 +9,10 @@ public class TechItem {
     public String imageLocation;
     public String location;
     public int quantity;
-    public Date expiration;
+    public long expiration;
     public int power;
 
-    public TechItem(String name, String description, String imageLocation, String location, int quantity, Date expiration, int power) {
+    public TechItem(String name, String description, String imageLocation, String location, int quantity, long expiration, int power) {
         this.name = name;
         this.description = description;
         this.imageLocation = imageLocation;
