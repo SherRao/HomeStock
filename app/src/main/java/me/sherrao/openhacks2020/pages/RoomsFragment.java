@@ -21,6 +21,8 @@ public class RoomsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_rooms, container, false);
 
+        view.findViewById(R.id.ki);
+
         return view;
 
     }

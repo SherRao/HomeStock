@@ -1,7 +1,5 @@
 package backend;
 
-import android.widget.ImageButton;
-
 import java.util.HashMap;
 import java.util.Map;
 
@@ -11,8 +9,8 @@ public class Backend {
 
     private final MainActivity app;
 
-    private Map<ImageButton, Item> miscItems;
-    private Map<ImageButton, TechItem> techItems;
+    private Map<String, Item> miscItems;
+    private Map<String, TechItem> techItems;
 
     public Backend(MainActivity app) {
         this.app = app;
@@ -24,16 +22,16 @@ public class Backend {
     }
 
     private void populateMap() {
-
+        miscItems.put("television", new Item("Television", "desc", "", "Living Room", 2));
 
     }
 
-    public Item getItemFromButton(ImageButton button) {
+    public Item getItemFromButton(String buttonName) {
         return this.miscItems.get(button);
 
     }
 
-    public TechItem getTechItemFromButton(ImageButton button) {
+    public TechItem getTechItemFromButton(String buttonName) {
         return this.techItems.get(button);
 
     }
