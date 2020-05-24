@@ -22,8 +22,8 @@ public class Backend {
     }
 
     private void populateMap() {
-        techItems.put("television", new TechItem("Television", "desc", "", "living-room", 2,  -1, 2));
-        techItems.put("microwave", new TechItem("Microwave", "desc", "", "kitchen", 1, -1 , 2));
+        techItems.put("television", new TechItem("Television", "desc", "", "living-room", 2, -1, 2));
+        techItems.put("microwave", new TechItem("Microwave", "desc", "", "kitchen", 1, -1, 2));
         //techItems.put("refrigerator", new TechItem("Refrigerator", "desc", "", "kitchen", 1, -1, 2));
         //techItems.put("lawnmotor", new TechItem("Lawnmower", "desc", "", "garage", 1, -1, 1));
         techItems.put("vacuum", new TechItem("Vacuum", "desc", "", "living-room", 1, -1, 1));
@@ -37,8 +37,10 @@ public class Backend {
         miscItems.put("frying-pan", new Item("Frying Pan", "desc", "", "Kitchen", 1));
         miscItems.put("bicycle", new Item("Bicycle", "desc", "", "garage", 1));
         miscItems.put("gift-wrap", new Item("Gift Wrap", "desc", "", "garage", 1));
-        miscItems.put("guitar", new Item( "Guitar", "desc", "", "garage", 1));
-        miscItems.put("toolkit", new Item( "Tool Kit", "desc", "", "garage", 1));
+        miscItems.put("guitar", new Item("Guitar", "desc", "", "garage", 1));
+        miscItems.put("toolkit", new Item("Tool Kit", "desc", "", "garage", 1));
+
+    }
 
     public Item getItemFromButton(String buttonName) {
         return this.miscItems.get(buttonName);
