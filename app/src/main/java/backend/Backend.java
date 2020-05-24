@@ -25,16 +25,29 @@ public class Backend {
 
     public Backend(MainActivity app) {
         this.app = app;
+        submitItem("Phone", "iPhone8", "cool place");
+    }
+
+    public void submitAuthRequest() {
+        //database stuff
+    }
+
+    /**
+     * Takes values that are inputted by user and adds to Firebase Database
+     * Uses Item.java file to create object
+     * @param name - name of the item
+     * @param description - description of item
+     * @param location - where item would be placed in the house
+     */
+    public void submitItem(String name, String description, String location ) {
         FirebaseFirestore db = FirebaseFirestore.getInstance();
-        Map<String, Object> user = new HashMap<>();
+        Map<String, Object> item = new HashMap<>();
+        item.put("name", name);
+        item.put("description",description);
+        item.put("location",location);
 
-        /**
-        user.put("first", "Tarandeep");
-        user.put("last", "Mittal");
-        user.put("born", 1998);
-
-        db.collection("inventory")
-                .add(user)
+        db.collection("nonTech")
+                .add(item)
                 .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                     @Override
                     public void onSuccess(DocumentReference documentReference) {
@@ -47,42 +60,32 @@ public class Backend {
                         Log.w(TAG, "Error adding document", e);
                     }
                 });
-         */
-    }
-
-    public void submitAuthRequest() {
-        //database stuff
-
-    }
-
-    public void submitItem(String name, String description, String location ) {
-        FirebaseFirestore db = FirebaseFirestore.getInstance();
-        String key = database.getReference("tech").push.getKey();
-
-        Item item = new Item();
-        item.setName(name);
-        item.setDesc(description);
-        item.setLoc(location);
-
-        Map<String, Object> childUpdates = new HashMap<>();
-        childUpdates.put(key, todo.toFirebaseObject());
-        database.getReference("Item").updateChildren(childUpdates, new DatabaseReference.CompletionListener()) {
-            @Override
-            public void onComplete(DatabaseError databaseError, DatabaseReference databaseReference) {
-                if (databaseError == null) {
-                    finish();
-                }
-            }
-        }
-
     }
 
     public void submitTech(String name, String description, String location, int powerConsumption, Date expirationDate ) {
         //database stuff
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        Map<String, Object> item = new HashMap<>();
+        item.put("name", name);
+        item.put("description",description);
+        item.put("location",location);
+        item.put("powerConsumption", powerConsumption);
+        item.put("expDate", expirationDate);
 
-
-
-
+        db.collection("Tech").document(location)
+                .set(item)
+                .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                    @Override
+                    public void onSuccess(DocumentReference documentReference) {
+                        Log.d(TAG, "DocumentSnapshot added with ID");
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Log.w(TAG, "Error adding document", e);
+                    }
+                });
     }
 
     public void setPowerUnit(String powerUnit) {
@@ -107,8 +110,8 @@ public class Backend {
     }
 
     public List<TechItem> getTechItem() {
-        //List<TechItem> items = new ArrayList<>();
-        //return items;
+        List<TechItem> items = new ArrayList<>();
+        return items;
     }
 
 
