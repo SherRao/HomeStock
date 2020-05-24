@@ -7,9 +7,9 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import backend.Backend;
-import me.sherrao.openhacks2020.ItemDisplayFragment;
 import me.sherrao.openhacks2020.MainActivity;
 import me.sherrao.openhacks2020.R;
 
@@ -31,18 +31,14 @@ public class MiscFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.pages_fragment_misc, container, false);
         app = (MainActivity) super.getActivity();
+        backend = app.getBackend();
 
         ImageButton toiletpaperButton = root.findViewById(R.id.toiletpaper);
         toiletpaperButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ItemDisplayFragment nextFrag = new ItemDisplayFragment();
-                nextFrag.item(backend.getItemFromButton("toiletpaper"));
-
-                app.getSupportFragmentManager().beginTransaction()
-                        .replace(root.getId(), nextFrag)
-                        .addToBackStack(null)
-                        .commit();
+                app.item("gay");
+                Navigation.findNavController(v).navigate(R.id.navigation_itemview, null, null);
 
             }
         });
@@ -51,13 +47,8 @@ public class MiscFragment extends Fragment {
         lawnmowerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ItemDisplayFragment nextFrag = new ItemDisplayFragment();
-                nextFrag.item(backend.getItemFromButton("lawnmower"));
-
-                app.getSupportFragmentManager().beginTransaction()
-                        .replace(root.getId(), nextFrag)
-                        .addToBackStack(null)
-                        .commit();
+                app.item("hi");
+                Navigation.findNavController(v).navigate(R.id.navigation_itemview, null, null);
 
             }
         });
@@ -66,14 +57,6 @@ public class MiscFragment extends Fragment {
         guitarButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ItemDisplayFragment nextFrag = new ItemDisplayFragment();
-                nextFrag.item(backend.getItemFromButton("guitar"));
-
-                app.getSupportFragmentManager().beginTransaction()
-                        .replace(root.getId(), nextFrag)
-                        .addToBackStack(null)
-                        .commit();
-
             }
         });
 
@@ -81,14 +64,6 @@ public class MiscFragment extends Fragment {
         giftwrapButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ItemDisplayFragment nextFrag = new ItemDisplayFragment();
-                nextFrag.item(backend.getItemFromButton("giftwrap"));
-
-                app.getSupportFragmentManager().beginTransaction()
-                        .replace(root.getId(), nextFrag)
-                        .addToBackStack(null)
-                        .commit();
-
             }
         });
 
@@ -96,14 +71,6 @@ public class MiscFragment extends Fragment {
         bicycleButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ItemDisplayFragment nextFrag = new ItemDisplayFragment();
-                nextFrag.item(backend.getItemFromButton("bicycle"));
-
-                app.getSupportFragmentManager().beginTransaction()
-                        .replace(root.getId(), nextFrag)
-                        .addToBackStack(null)
-                        .commit();
-
             }
         });
 
@@ -111,14 +78,6 @@ public class MiscFragment extends Fragment {
         toolkitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ItemDisplayFragment nextFrag = new ItemDisplayFragment();
-                nextFrag.item(backend.getItemFromButton("toolkit"));
-
-                app.getSupportFragmentManager().beginTransaction()
-                        .replace(root.getId(), nextFrag)
-                        .addToBackStack(null)
-                        .commit();
-
             }
         });
 

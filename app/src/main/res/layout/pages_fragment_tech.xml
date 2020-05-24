@@ -11,7 +11,7 @@
         android:id="@+id/tech_title"
         android:layout_width="fill_parent"
         android:layout_height="46dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/poppins_bold"
         android:gravity="center"
         android:text="Electronics"
@@ -27,7 +27,7 @@
         android:id="@+id/settings_header_background2"
         android:layout_width="435dp"
         android:layout_height="281dp"
-        android:layout_marginBottom="650dp"
+        android:layout_marginBottom="700dp"
         android:src="@drawable/header_background"
         android:translationZ="1dp"
         android:visibility="visible"
@@ -39,7 +39,7 @@
         android:id="@+id/tech_amount"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="110dp"
+        android:layout_marginTop="70dp"
         android:fontFamily="@font/poppins_light"
         android:gravity="center"
         android:text="Number of Items: {number}"
@@ -51,34 +51,33 @@
 
     <ImageView
         android:id="@+id/overview"
-        android:layout_width="360dp"
-        android:layout_height="104dp"
-        android:layout_marginTop="155dp"
+        android:layout_width="368dp"
+        android:layout_height="98dp"
+        android:layout_marginTop="96dp"
         android:scaleType="centerInside"
         android:src="@drawable/overview"
         android:translationZ="3dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
         android:id="@+id/television"
-        android:layout_width="335dp"
+        android:layout_width="375dp"
         android:layout_height="85dp"
-        android:layout_marginTop="20dp"
         android:background="@android:color/transparent"
         android:scaleType="centerInside"
         android:src="@drawable/television"
+        android:translationZ="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/overview" />
 
     <ImageButton
         android:id="@+id/laptop"
-        android:layout_width="335dp"
+        android:layout_width="375dp"
         android:layout_height="85dp"
-        android:layout_marginTop="5dp"
         android:background="@android:color/transparent"
         android:scaleType="centerInside"
         android:src="@drawable/laptop"
@@ -88,9 +87,8 @@
 
     <ImageButton
         android:id="@+id/vacuum"
-        android:layout_width="335dp"
+        android:layout_width="375dp"
         android:layout_height="85dp"
-        android:layout_marginTop="5dp"
         android:background="@android:color/transparent"
         android:scaleType="centerInside"
         android:src="@drawable/vacuum"
@@ -100,9 +98,8 @@
 
     <ImageButton
         android:id="@+id/microwave"
-        android:layout_width="335dp"
+        android:layout_width="375dp"
         android:layout_height="85dp"
-        android:layout_marginTop="5dp"
         android:background="@android:color/transparent"
         android:scaleType="centerInside"
         android:src="@drawable/microwave"
@@ -112,9 +109,8 @@
 
     <ImageButton
         android:id="@+id/lightbulbs"
-        android:layout_width="335dp"
+        android:layout_width="375dp"
         android:layout_height="85dp"
-        android:layout_marginTop="5dp"
         android:background="@android:color/transparent"
         android:scaleType="centerInside"
         android:src="@drawable/lightbulbs"
@@ -124,9 +120,8 @@
 
     <ImageButton
         android:id="@+id/acunt"
-        android:layout_width="335dp"
+        android:layout_width="375dp"
         android:layout_height="85dp"
-        android:layout_marginTop="5dp"
         android:background="@android:color/transparent"
         android:scaleType="centerInside"
         android:src="@drawable/acunit"

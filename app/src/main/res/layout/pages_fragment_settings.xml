@@ -53,13 +53,12 @@
         android:layout_width="78dp"
         android:layout_height="74dp"
         android:layout_marginBottom="600dp"
-        android:src="@drawable/ic_account_icon"
+        android:src="@drawable/default_profile"
         android:translationZ="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/default_profile" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/account_name"

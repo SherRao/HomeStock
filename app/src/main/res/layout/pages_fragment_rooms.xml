@@ -5,13 +5,14 @@
     android:id="@+id/rooms_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#CEE8E8" tools:context=".pages.RoomsFragment">
+    android:background="#CEE8E8"
+    tools:context=".pages.RoomsFragment">
 
     <ImageView
         android:id="@+id/home_header_background"
-        android:layout_width="411dp"
-        android:layout_height="589dp"
-        android:layout_marginBottom="444dp"
+        android:layout_width="401dp"
+        android:layout_height="275dp"
+        android:layout_marginBottom="625dp"
         android:background="@android:color/transparent"
         android:src="@drawable/header_background"
         android:translationZ="1dp"
@@ -24,7 +25,7 @@
         android:id="@+id/home_title"
         android:layout_width="fill_parent"
         android:layout_height="46dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/poppins_bold"
         android:gravity="center"
         android:text="@string/title_home"
@@ -40,21 +41,21 @@
         android:id="@+id/account_icon"
         android:layout_width="78dp"
         android:layout_height="74dp"
-        android:layout_marginBottom="656dp"
         android:background="@android:color/transparent"
+        android:foreground="@drawable/default_profile"
         android:src="@drawable/ic_account_icon"
         android:translationZ="4dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/home_title"
         app:srcCompat="@drawable/default_profile" />
 
     <TextView
         android:id="@+id/home_greeting"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="208dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/poppins_light"
         android:gravity="center"
         android:text="What are you looking for today?"
@@ -63,13 +64,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/account_icon" />
 
     <TextView
         android:id="@+id/home_name"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="188dp"
         android:fontFamily="@font/poppins_medium"
         android:gravity="center"
         android:text="Hello, Ratchel Green!"
@@ -78,58 +78,60 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/account_icon" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/kitchen_button"
         android:layout_width="365dp"
-        android:layout_height="847dp"
-        android:layout_marginBottom="100dp"
+        android:layout_height="125dp"
+        android:layout_marginTop="20dp"
         android:background="@android:color/transparent"
+        android:foreground="@drawable/kitchen"
         android:src="@drawable/kitchen"
         android:translationZ="2dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <ImageView
-        android:id="@+id/livingroom_button"
-        android:layout_width="365dp"
-        android:layout_height="847dp"
-        android:layout_marginTop="28dp"
-        android:background="@android:color/transparent"
-        android:src="@drawable/kitchen"
-        android:translationZ="2dp"
+        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/living_room" />
+        app:layout_constraintTop_toBottomOf="@+id/home_header_background" />
 
-    <ImageView
-        android:id="@+id/washroom_button"
-        android:layout_width="365dp"
-        android:layout_height="847dp"
-        android:layout_marginTop="164dp"
-        android:background="@android:color/transparent"
-        android:src="@drawable/kitchen"
-        android:translationZ="2dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/washroom" />
-
-    <ImageView
+    <ImageButton
         android:id="@+id/garage_button"
         android:layout_width="365dp"
-        android:layout_height="847dp"
-        android:layout_marginTop="300dp"
+        android:layout_height="125dp"
+        android:layout_marginTop="10dp"
         android:background="@android:color/transparent"
+        android:foreground="@drawable/garage"
         android:longClickable="false"
         android:src="@drawable/kitchen"
         android:translationZ="2dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/garage" />
+        app:layout_constraintTop_toBottomOf="@+id/washroom_button" />
+
+    <ImageButton
+        android:id="@+id/livingroom_button"
+        android:layout_width="365dp"
+        android:layout_height="125dp"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/transparent"
+        android:foreground="@drawable/living_room"
+        android:src="@drawable/kitchen"
+        android:translationZ="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/kitchen_button" />
+
+    <ImageButton
+        android:id="@+id/washroom_button"
+        android:layout_width="365dp"
+        android:layout_height="125dp"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/transparent"
+        android:foreground="@drawable/washroom"
+        android:src="@drawable/kitchen"
+        android:translationZ="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/livingroom_button" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -12,7 +12,7 @@
         android:id="@+id/kitchen_title"
         android:layout_width="fill_parent"
         android:layout_height="46dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/poppins_bold"
         android:gravity="center"
         android:text="Kitchen"
@@ -28,7 +28,7 @@
         android:id="@+id/kitchen_header_background2"
         android:layout_width="435dp"
         android:layout_height="281dp"
-        android:layout_marginBottom="650dp"
+        android:layout_marginBottom="700dp"
         android:src="@drawable/header_background"
         android:translationZ="1dp"
         android:visibility="visible"
@@ -40,7 +40,7 @@
         android:id="@+id/kitchen_amount"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="110dp"
+        android:layout_marginTop="70dp"
         android:fontFamily="@font/poppins_light"
         android:gravity="center"
         android:text="Number of Items: {number}"
@@ -54,9 +54,7 @@
         android:id="@+id/overview"
         android:layout_width="360dp"
         android:layout_height="104dp"
-        android:layout_marginTop="155dp"
-        android:foreground="@drawable/overview_dark"
-        android:scaleType="centerInside"
+        android:layout_marginTop="96dp"
         android:src="@drawable/overview"
         android:translationZ="3dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -66,11 +64,10 @@
 
     <ImageButton
         android:id="@+id/utensils"
-        android:layout_width="335dp"
+        android:layout_width="375dp"
         android:layout_height="85dp"
-        android:layout_marginTop="20dp"
         android:background="@android:color/transparent"
-        android:scaleType="centerInside"
+        android:scaleType="fitCenter"
         android:src="@drawable/utensils"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -78,7 +75,7 @@
 
     <ImageButton
         android:id="@+id/microwave_1"
-        android:layout_width="335dp"
+        android:layout_width="375dp"
         android:layout_height="85dp"
         android:layout_marginTop="5dp"
         android:background="@android:color/transparent"
@@ -90,7 +87,7 @@
 
     <ImageButton
         android:id="@+id/kettle"
-        android:layout_width="335dp"
+        android:layout_width="375dp"
         android:layout_height="85dp"
         android:layout_marginTop="5dp"
         android:background="@android:color/transparent"
@@ -102,7 +99,7 @@
 
     <ImageButton
         android:id="@+id/frypan"
-        android:layout_width="335dp"
+        android:layout_width="375dp"
         android:layout_height="85dp"
         android:layout_marginTop="5dp"
         android:background="@android:color/transparent"
@@ -114,7 +111,7 @@
 
     <ImageButton
         android:id="@+id/fridge"
-        android:layout_width="335dp"
+        android:layout_width="375dp"
         android:layout_height="85dp"
         android:layout_marginTop="5dp"
         android:background="@android:color/transparent"
@@ -126,11 +123,10 @@
 
     <ImageButton
         android:id="@+id/cutlery"
-        android:layout_width="335dp"
+        android:layout_width="375dp"
         android:layout_height="85dp"
         android:layout_marginTop="5dp"
         android:background="@android:color/transparent"
-        android:foreground="@drawable/cutlery"
         android:scaleType="centerInside"
         android:src="@drawable/toolkit"
         app:layout_constraintEnd_toEndOf="parent"
