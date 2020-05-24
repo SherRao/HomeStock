@@ -35,7 +35,7 @@ public class SettingsFragment extends Fragment {
         backend = app.getBackend();
 
         TextView accountName = (TextView) view.findViewById(R.id.account_name);
-        accountName.setText( backend.getUserName() );
+        accountName.setText(backend.getUserName() );
 
         return view;
     }
